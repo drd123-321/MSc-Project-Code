@@ -1,0 +1,177 @@
+:root {
+	--sidebar-bg: #fafafa;
+	--main-bg: #efc094;
+	--white: #ffffff;
+	--text: #2b2b2b;
+	--muted: #6b6b6b;
+	--accent: #8a5a2b;
+	--border: #d8d8d8;
+	--error: #b3261e;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--main-bg);
+	font-family: Arial, Helvetica, sans-serif;
+	color: var(--text);
+}
+
+.auth-card {
+	width: 100%;
+	max-width: 360px;
+	background: var(--white);
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	padding: 32px;
+}
+
+h1 {
+	font-size: 20px;
+	margin: 0 0 4px;
+	text-align: center;
+}
+
+p.subtitle {
+	margin: 0 0 24px;
+	text-align: center;
+	color: var(--muted);
+	font-size: 13px;
+}
+
+.tabs {
+	display: flex;
+	margin-bottom: 24px;
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.tab {
+	flex: 1;
+	text-align: center;
+	padding: 10px;
+	cursor: pointer;
+	font-size: 14px;
+	color: var(--muted);
+	background: var(--sidebar-bg);
+}
+
+.tab.active {
+	background: var(--accent);
+	color: var(--white);
+}
+
+label {
+	display: block;
+	font-size: 13px;
+	color: var(--muted);
+	margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+	width: 100%;
+	padding: 10px 12px;
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	font-size: 14px;
+	margin-bottom: 16px;
+}
+
+input:focus {
+	outline: none;
+	border-color: var(--accent);
+}
+
+button {
+	width: 100%;
+	padding: 11px;
+	background: var(--accent);
+	border: none;
+	border-radius: 6px;
+	color: var(--white);
+	font-weight: 600;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+	opacity: 0.9;
+}
+
+button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+#statusMessage {
+	margin-top: 14px;
+	font-size: 13px;
+	text-align: center;
+	min-height: 16px;
+}
+
+#statusMessage.error {
+	color: var(--error);
+}
+#statusMessage.ok {
+	color: var(--muted);
+}
+
+.form-section {
+	display: none;
+}
+.form-section.active {
+	display: block;
+}
+
+.link-row {
+	text-align: center;
+	margin-top: 14px;
+	font-size: 13px;
+}
+
+.link-row a {
+	color: var(--accent);
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.account-type {
+	margin-bottom: 16px;
+}
+
+.account-type-title {
+	margin: 0 0 8px;
+	font-size: 13px;
+	color: var(--muted);
+}
+
+.account-type-option {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 8px;
+	font-size: 13px;
+	color: var(--text);
+	cursor: pointer;
+}
+
+.account-type-option input[type="radio"] {
+	width: auto;
+	margin: 0;
+	accent-color: var(--accent);
+}
+
+.account-type-option span {
+	color: var(--text);
+}

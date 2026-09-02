@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Music App — Log In</title>
+
+		<!-- Bootstrap -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+			crossorigin="anonymous"
+		/>
+		<!-- jQuery -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<!-- Amazon Cognito Identity SDK -->
+		<script src="https://cdn.jsdelivr.net/npm/amazon-cognito-identity-js@6.3.12/dist/amazon-cognito-identity.min.js"></script>
+
+		<script src="js/config.js" defer></script>
+		<script src="js/api.js" defer></script>
+		<script src="js/login.js" defer></script>
+
+		<link rel="stylesheet" href="css/login.css" />
+	</head>
+	<body>
+		<div class="auth-card">
+			<h1>Music App</h1>
+			<p class="subtitle">Sign in to your account</p>
+
+			<div class="tabs">
+				<div class="tab active" id="tabLogin">Log In</div>
+				<div class="tab" id="tabSignup">Sign Up</div>
+			</div>
+
+			<!-- LOG IN FORM -->
+			<div class="form-section active" id="loginSection">
+				<label for="loginEmail">Email</label>
+				<input type="email" id="loginEmail" placeholder="you@example.com" />
+
+				<label for="loginPassword">Password</label>
+				<input type="password" id="loginPassword" placeholder="Password" />
+
+				<button id="loginBtn">Log In</button>
+			</div>
+
+			<!-- SIGN UP FORM -->
+			<div class="form-section" id="signupSection">
+				<label for="signupName">First name</label>
+				<input type="text" id="signupName" placeholder="Enter your name" />
+
+				<label for="signupEmail">Email</label>
+				<input type="email" id="signupEmail" placeholder="example@email.com" />
+
+				<div class="account-type">
+					<p class="account-type-title">Account type</p>
+
+					<label class="account-type-option">
+						<input type="radio" name="accountType" value="listener" checked />
+						<span>Listener</span>
+					</label>
+
+					<label class="account-type-option">
+						<input type="radio" name="accountType" value="artist" />
+						<span>Artist</span>
+					</label>
+				</div>
+
+				<label for="signupPassword">Password</label>
+				<input
+					type="password"
+					id="signupPassword"
+					placeholder="At least 8 characters"
+				/>
+
+				<button id="signupBtn">Sign Up</button>
+			</div>
+
+			<!-- CONFIRMATION CODE FORM (shown after sign up) -->
+			<div class="form-section" id="confirmSection">
+				<label for="confirmCode">Verification Code</label>
+				<input
+					type="text"
+					id="confirmCode"
+					placeholder="Check your email for a code"
+				/>
+
+				<button id="confirmBtn">Confirm Account</button>
+			</div>
+
+			<div id="statusMessage"></div>
+
+			<div class="link-row" id="backToLoginRow" style="display: none">
+				<a id="backToLogin">Back to log in</a>
+			</div>
+		</div>
+	</body>
+</html>

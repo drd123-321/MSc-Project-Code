@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Upload Song — Music App</title>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+		<script src="../js/config.js" defer></script>
+		<script src="../js/auth.js" defer></script>
+		<script src="../js/api.js" defer></script>
+		<script src="../js/upload.js" defer></script>
+
+		<link rel="stylesheet" href="../css/upload.css" />
+	</head>
+	<body>
+		<div class="page">
+			<a href="../index.html" class="back-link">&larr; Back to home</a>
+
+			<div class="form-card">
+				<h1>Upload a Song</h1>
+
+				<label for="titleInput">Title</label>
+				<input type="text" id="titleInput" placeholder="Song title" />
+
+				<label for="albumInput">Album (optional)</label>
+				<input type="text" id="albumInput" placeholder="Album name" />
+				<div class="hint">Leave blank if this song isn't part of an album.</div>
+
+				<label for="fileInput">MP3 file</label>
+				<input type="file" id="fileInput" accept="audio/mpeg,.mp3" />
+
+				<button id="uploadBtn">Upload</button>
+
+				<div id="statusMessage"></div>
+			</div>
+		</div>
+	</body>
+</html>

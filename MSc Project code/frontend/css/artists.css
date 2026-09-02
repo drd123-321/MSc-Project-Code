@@ -1,0 +1,80 @@
+:root {
+	--sidebar-bg: #fafafa;
+	--main-bg: #efc094;
+	--white: #ffffff;
+	--text: #2b2b2b;
+	--muted: #6b6b6b;
+	--accent: #8a5a2b;
+	--border: #d8d8d8;
+	--circle-bg: #ececec;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	background: var(--main-bg);
+	font-family: Arial, Helvetica, sans-serif;
+	color: var(--text);
+}
+
+.page {
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 32px 24px;
+}
+
+.page-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 24px;
+}
+
+h1 {
+	font-size: 20px;
+	margin: 0;
+}
+
+a.back-link {
+	font-size: 13px;
+	color: var(--accent);
+	text-decoration: none;
+}
+
+a.back-link:hover {
+	text-decoration: underline;
+}
+
+.artist-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+}
+
+.artist-card {
+	text-align: center;
+	cursor: pointer;
+	width: 96px;
+}
+
+.artist-circle {
+	width: 96px;
+	height: 96px;
+	border-radius: 50%;
+	background: var(--circle-bg);
+	margin-bottom: 8px;
+}
+
+.artist-name {
+	font-size: 12px;
+}
+
+.empty-note {
+	font-size: 13px;
+	color: var(--text);
+	opacity: 0.7;
+}
